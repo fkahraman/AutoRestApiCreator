@@ -13,8 +13,8 @@ if __name__ == "__main__":
 
     director = Director()
 
-    builder = ConcreteBuilder(Method='post', Endpoint='upload',  Keys=['mail', 'apikey'])
-    builder2 = ConcreteBuilder(Method='get', Endpoint='image', ExLibs=['base64', 'json'], Keys=['mail', 'apikey'])
+    builder = ConcreteBuilder(Method='post', Endpoint='upload', ExLibs=['base64', 'json'], Keys=['mail', 'apikey'])
+    builder2 = ConcreteBuilder(Method='get', Endpoint='image', Keys=['mail', 'apikey'])
     builder3 = ConcreteBuilder(Method='post', Endpoint='record', Keys=['mail', 'apikey', 'loc'])
 
     director.builder = builder
