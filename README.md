@@ -6,36 +6,55 @@ A program where you can create a skeleton for flask rest api by entering endpoin
 
 ## Usage
 ----
-Python File: **Client.py**
-**Code:**
+Sample Config File: **Config/config.json**
 
+```
+{
+  "Services": {
+    "Rest1": {
+      "Endpoint": "upload",
+      "Methods": {
+        "POST": {
+          "apikey": "Kirel",
+          "mail": "kirel@kirel.com"
+        },
+        "PUT": {
+          "apikey": "Kirel",
+          "updateItem": "KirelItem"
+        }
+      }
+    },
+    "Rest2": {
+      "Endpoint": "image",
+      "Methods": {
+        "GET": {
+          "imageID": "64"
+        }
+      }
+    },
+    "Rest3": {
+      "Endpoint": "info",
+      "Methods": {
+        "POST": {
+          "userId": "25",
+          "token": "88STT893ASDD0"
+        },
+        "GET": {
+          "userId": 25
+        }
+      }
+    }
+  },
+  "ExtraLibs": [
+    "json",
+    "base64"
+  ],
+  "Port": "9876"
+}
+```    
+Output File: **APIs/sample.py**
 
-    director = Director()
-
-    builder = ConcreteBuilder(Method='post', Endpoint='upload',  ExLibs=['base64', 'json'], Keys=['mail', 'apikey'])
-    builder2 = ConcreteBuilder(Method='get', Endpoint='image', Keys=['mail', 'apikey'])
-    builder3 = ConcreteBuilder(Method='post', Endpoint='record', Keys=['mail', 'apikey', 'loc'])
-
-    director.builder = builder
-    director.build_RestFul()
-
-    director.builder = builder2
-    director.build_RestFul()
-
-    director.builder = builder3
-    director.build_RestFul()
-
-    builder.product.list_parts()
-    builder2.product.list_parts()
-    builder3.product.list_parts()
-
-    builder.product.createPy(fileName="APIs/deneme")
-    builder2.product.createPy(fileName="APIs/deneme")
-    builder3.product.createPy(fileName="APIs/deneme")
-    
-Output File: **Deneme.py**
-
-	import flask
+    import flask
 	from flask import Flask, request, jsonify, send_file
 	
 	app = Flask(__name__)
@@ -77,11 +96,7 @@ Output File: **Deneme.py**
 		else:
 			return jsonify({'Message': 'Wrong Key!'})
 	
+----
 
-
-
-
-
-
-
-
+        Author : Fatih Kahraman
+        Main   : fatih.khrmn@hotmail.com
