@@ -13,28 +13,11 @@ if __name__ == "__main__":
 
     director = Director()
 
-    builder = ConcreteBuilder(Method='post', Endpoint='upload', ExLibs=['base64', 'json'], Keys=['mail', 'apikey'])
-    builder2 = ConcreteBuilder(Method='get', Endpoint='image', Keys=['mail', 'apikey'])
-    builder3 = ConcreteBuilder(Method='post', Endpoint='record', Keys=['mail', 'apikey', 'loc'])
+    builder = ConcreteBuilder()
 
     director.builder = builder
     director.build_RestFul()
 
-    director.builder = builder2
-    director.build_RestFul()
-
-    director.builder = builder3
-    director.build_RestFul()
-
     builder.product.list_parts()
-    builder2.product.list_parts()
-    builder3.product.list_parts()
 
-    builder.product.createPy(fileName="APIs/deneme")
-    builder2.product.createPy(fileName="APIs/deneme")
-    builder3.product.createPy(fileName="APIs/deneme")
-
-
-
-
-
+    builder.product.createPy(fileName="sample")

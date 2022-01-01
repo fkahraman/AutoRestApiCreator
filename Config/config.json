@@ -1,0 +1,42 @@
+{
+  "Services": {
+    "Rest1": {
+      "Endpoint": "upload",
+      "Methods": {
+        "POST": {
+          "apikey": "Kirel",
+          "mail": "kirel@kirel.com"
+        },
+        "PUT": {
+          "apikey": "Kirel",
+          "updateItem": "KirelItem"
+        }
+      }
+    },
+    "Rest2": {
+      "Endpoint": "image",
+      "Methods": {
+        "GET": {
+          "imageID": "64"
+        }
+      }
+    },
+    "Rest3": {
+      "Endpoint": "info",
+      "Methods": {
+        "POST": {
+          "userId": "25",
+          "token": "88STT893ASDD0"
+        },
+        "GET": {
+          "userId": 25
+        }
+      }
+    }
+  },
+  "ExtraLibs": [
+    "json",
+    "base64"
+  ],
+  "Port": "9876"
+}

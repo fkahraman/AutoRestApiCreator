@@ -20,7 +20,7 @@ class Creator():
         print(f"{''.join(self.parts)}", end="")
 
     def createPy(self, fileName = None):
-        f = open(f'{fileName}.py', 'a+')
+        f = open(f'APIs/{fileName}.py', 'a+')
         for part in self.parts:
             f.write(part)
         f.close()
