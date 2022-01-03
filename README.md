@@ -52,8 +52,11 @@ Sample Config File: **Config/config.json**
   "Port": "9876"
 }
 ```
+
 Run File: **Client.py**
+----
 Output File: **APIs/sample.py**
+
 ```
 
 	import flask
@@ -97,7 +100,7 @@ Output File: **APIs/sample.py**
 	if __name__ == "__main__":
 		app.run(host="0.0.0.0", port=9876, debug=False, threaded=True)
 		
-----
+```
 
         Author : Fatih Kahraman
         Main   : fatih.khrmn@hotmail.com
